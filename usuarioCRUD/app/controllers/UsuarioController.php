@@ -21,6 +21,9 @@ class UsuarioController extends \BaseController {
     public function store()
     {
         $input = Input::all();
+
+        // Encriptar la contraseña antes de crear el usuario
+        $input['contrasenha'] = Hash::make($input['contrasenha']);
         Usuario::create($input);
         return Redirect::route('usuarios.index');
     }
