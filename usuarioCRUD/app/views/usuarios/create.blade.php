@@ -20,6 +20,7 @@
         <div class="form-group">
             <div class="col-sm-offset-2 col-sm-10">
                 {{ Form::submit('Crear Usuario', ['class' => 'btn btn-primary']) }}
+                <a href="{{ route('usuarios.index') }}" class="btn btn-primary">Cancelar</a>
             </div>
         </div>
     {{ Form::close() }}
